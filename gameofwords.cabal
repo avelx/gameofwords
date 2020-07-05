@@ -1,0 +1,63 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: f2e953a055f527500e055c9dca7cfd1e0b7fdbfbc89195ccd343bd94f25cb8ea
+
+name:           gameofwords
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/avelx/gameofwords#readme>
+homepage:       https://github.com/avelx/gameofwords#readme
+bug-reports:    https://github.com/avelx/gameofwords/issues
+author:         Pavel Oliynyk (based on the Udemy Haskell course)
+maintainer:     pavel.oliynyk@gmail.com
+copyright:      BSD
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/avelx/gameofwords
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_gameofwords
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable words
+  main-is: Main.hs
+  other-modules:
+      Paths_gameofwords
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -dynamic
+  build-depends:
+      base >=4.7 && <5
+    , gameofwords
+  default-language: Haskell2010
+
+test-suite gameofwords-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_gameofwords
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , hspec
+    , gameofwords
+  default-language: Haskell2010
