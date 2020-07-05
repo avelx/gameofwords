@@ -21,3 +21,13 @@ cabal.project.local
 cabal.project.local~
 .HTF/
 .ghc.environment.*
+/.idea/libraries/*.xml
+/ChangeLog.md
+/.idea/emacs.xml
+/.idea/sbt.xml
+/.idea/vcs.xml
+/stack.yaml.lock
+/.idea/modules.xml
+/.idea/misc.xml
+/gameofwords.iml
+/.idea/codeStyles/codeStyleConfig.xml
