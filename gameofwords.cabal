@@ -27,7 +27,8 @@ source-repository head
 
 library
   exposed-modules:
-      Lib
+        Lib
+      , Data
   other-modules:
       Paths_gameofwords
   hs-source-dirs:
